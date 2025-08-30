@@ -1,8 +1,42 @@
-# My-Cornell-Portfolio
-machine learning projects
+# Bank Account (C++)
 
-For this project, I worked with real Airbnb data to figure out if a listing lets you book it right away without waiting for host approval. I cleaned up the data, explored it to understand what’s going on, and then used a logistic regression model to make predictions.
+A small C++ project that provides a `BankAccount` class with essential banking functions and validation.
 
-Along the way,  I didn’t just look at accuracyI also checked the F1 score and confusion matrix to make sure my model was actually doing a good job. Since the data was a bit unbalanced (some types of listings showed up more than others), using just accuracy would’ve been misleading.
+## Features
+- Deposit, withdraw, check balance, display account info
+- 3 validation checks:
+  - Initial balance cannot be negative
+  - Deposit amount must be positive
+  - Withdrawal amount must be positive and cannot exceed current balance
 
-This project was part of my Break Through Tech machine learning course, and it really helped me see how important it is to understand your data before jumping into modeling.
+## Build
+
+Requires `g++` with C++17.
+
+```bash
+make
+```
+
+## Run Demo
+```bash
+make run
+```
+
+## Run Tests
+```bash
+make test
+```
+You should see all tests passing.
+
+## Example Output
+```text
+Account Holder: Alice
+Balance: $120
+Current balance: $120
+```
+
+## Project Structure
+- `src/BankAccount.h`, `src/BankAccount.cpp`: Class implementation
+- `src/main.cpp`: Simple demo
+- `tests/test_bank_account.cpp`: Lightweight unit tests
+- `Makefile`: Build targets (`run`, `test`)
